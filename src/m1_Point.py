@@ -80,6 +80,8 @@ class Point(object):
         return math.sqrt((self.x - start.x)**2 + (self.y - start.y)**2)
 
 
+
+
 def run_test_init():
     """
     Tests the   __init__   method of the Point class.
