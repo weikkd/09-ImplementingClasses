@@ -51,6 +51,9 @@ class Point(object):
         self.x = x_val
         self.y = y_val
 
+        self.originalx = self.x
+        self.originaly = self.y
+
         self.moves = 0
 
     def __repr__(self):
@@ -76,8 +79,8 @@ class Point(object):
     def get_distance_from(self, p):
         return math.sqrt((p.x - self.x)**2 + (p.y - self.y)**2)
 
-    def get_distance_from_start(self, start):
-        return math.sqrt((self.x - start.x)**2 + (self.y - start.y)**2)
+    def get_distance_from_start(self):
+        return math.sqrt((self.x - self.originalx)**2 + (self.y - self.originaly)**2)
 
 
 
