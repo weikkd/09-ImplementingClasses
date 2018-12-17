@@ -54,6 +54,8 @@ class Point(object):
         self.originalx = self.x
         self.originaly = self.y
 
+        self.dist_traveled = 0
+
         self.moves = 0
 
     def __repr__(self):
@@ -65,6 +67,9 @@ class Point(object):
     def move_to(self, x, y):
         self.y = y
         self.x = x
+
+        distance = self.get_distance_from(Point(x, y))
+        self.dist_traveled = distance + 1
 
         self.moves = self.moves + 1
 
@@ -82,6 +87,13 @@ class Point(object):
     def get_distance_from_start(self):
         return math.sqrt((self.x - self.originalx)**2 + (self.y - self.originaly)**2)
 
+    def get_distance_traveled(self):
+        return self.dist_traveled
+
+    def closer_to(self, p2, p3):
+
+
+    def halfway_to(self):
 
 
 
